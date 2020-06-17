@@ -1,15 +1,36 @@
 @import "./reset.css";
 $heightFooter: 60px;
+$heightHeader: 60px;
+$height100: 100vh;
 
-html, body {
-	margin: 0;
-	padding: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
+
 main {
-	min-height: calc(100vh - $heightFooter);
+  min-height: calc(#{$height100} - #{$heightFooter});
+
+  img {
+    transition: transform 0.5s;
+  }
+
+  .rotateY {
+    transform: rotateY(360deg);
+  }
+
+  .rotateX {
+    transform: rotateX(360deg);
+  }
+
+  .rotate {
+    transform: rotate(360deg);
+  }
 }
+
 footer {
-	height: $heightFooter;
+  height: $heightFooter;
 }
 
 .h1 {

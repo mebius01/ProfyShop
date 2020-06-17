@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./reset.css */ \"./node_modules/css-loader/dist/cjs.js!./src/style/reset.css\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);\n// Module\nexports.push([module.i, \"html, body {\\n  margin: 0;\\n  padding: 0;\\n}\\n\\nmain {\\n  min-height: calc(100vh - $heightFooter);\\n}\\n\\nfooter {\\n  height: 60px;\\n}\\n\\n.h1 {\\n  display: flex;\\n  justify-content: center;\\n  justify-items: center;\\n  font-size: 40px;\\n  padding: 10px;\\n  color: #3b3b3b;\\n  background-color: rgba(228, 152, 152, 0.808);\\n}\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/style/index.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./reset.css */ \"./node_modules/css-loader/dist/cjs.js!./src/style/reset.css\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);\n// Module\nexports.push([module.i, \"html,\\nbody {\\n  margin: 0;\\n  padding: 0;\\n}\\n\\nmain {\\n  min-height: calc(100vh - 60px);\\n}\\nmain img {\\n  transition: transform 0.5s;\\n}\\nmain .rotateY {\\n  transform: rotateY(360deg);\\n}\\nmain .rotateX {\\n  transform: rotateX(360deg);\\n}\\nmain .rotate {\\n  transform: rotate(360deg);\\n}\\n\\nfooter {\\n  height: 60px;\\n}\\n\\n.h1 {\\n  display: flex;\\n  justify-content: center;\\n  justify-items: center;\\n  font-size: 40px;\\n  padding: 10px;\\n  color: #3b3b3b;\\n  background-color: rgba(228, 152, 152, 0.808);\\n}\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/style/index.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -132,6 +132,66 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
+/***/ "./src/img/icons8-facebook-64.png":
+/*!****************************************!*\
+  !*** ./src/img/icons8-facebook-64.png ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"img/icons8-facebook-64.png\");\n\n//# sourceURL=webpack:///./src/img/icons8-facebook-64.png?");
+
+/***/ }),
+
+/***/ "./src/img/icons8-instagram-64.png":
+/*!*****************************************!*\
+  !*** ./src/img/icons8-instagram-64.png ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"img/icons8-instagram-64.png\");\n\n//# sourceURL=webpack:///./src/img/icons8-instagram-64.png?");
+
+/***/ }),
+
+/***/ "./src/img/icons8-map-64.png":
+/*!***********************************!*\
+  !*** ./src/img/icons8-map-64.png ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"img/icons8-map-64.png\");\n\n//# sourceURL=webpack:///./src/img/icons8-map-64.png?");
+
+/***/ }),
+
+/***/ "./src/img/icons8-pickup-point-64.png":
+/*!********************************************!*\
+  !*** ./src/img/icons8-pickup-point-64.png ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"img/icons8-pickup-point-64.png\");\n\n//# sourceURL=webpack:///./src/img/icons8-pickup-point-64.png?");
+
+/***/ }),
+
+/***/ "./src/img/logo.png":
+/*!**************************!*\
+  !*** ./src/img/logo.png ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"img/logo.png\");\n\n//# sourceURL=webpack:///./src/img/logo.png?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -140,7 +200,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style/index.scss */ \"./src/style/index.scss\");\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_index_scss__WEBPACK_IMPORTED_MODULE_0__);\n// import 'normalize-scss'\n\n\nconsole.log(\"hell world\");\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style/index.scss */ \"./src/style/index.scss\");\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_index_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/logo.png */ \"./src/img/logo.png\");\n/* harmony import */ var _img_icons8_facebook_64_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/icons8-facebook-64.png */ \"./src/img/icons8-facebook-64.png\");\n/* harmony import */ var _img_icons8_instagram_64_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/icons8-instagram-64.png */ \"./src/img/icons8-instagram-64.png\");\n/* harmony import */ var _img_icons8_map_64_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/icons8-map-64.png */ \"./src/img/icons8-map-64.png\");\n/* harmony import */ var _img_icons8_pickup_point_64_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/icons8-pickup-point-64.png */ \"./src/img/icons8-pickup-point-64.png\");\n// import 'normalize-scss'\n\n\n\n\n\n\n\nconsole.log(\"hell world\");\n\nfacebook.onclick = function () {\n  this.classList.toggle('rotateY')\n}\n\ninsta.onclick = function () {\n  this.classList.toggle('rotateX')\n}\n\nmap.onclick = function () {\n  this.classList.toggle('rotate')\n}\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
