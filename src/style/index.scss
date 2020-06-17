@@ -1,3 +1,17 @@
+@import "./reset.css";
+$heightFooter: 60px;
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+main {
+	min-height: calc(100vh - $heightFooter);
+}
+footer {
+	height: $heightFooter;
+}
+
 .h1 {
   display: flex;
   justify-content: center;
