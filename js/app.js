@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./reset.css */ \"./node_modules/css-loader/dist/cjs.js!./src/style/reset.css\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);\n// Module\nexports.push([module.i, \"html,\\nbody {\\n  margin: 0;\\n  padding: 0;\\n}\\n\\nmain {\\n  min-height: calc(100vh - 60px);\\n}\\nmain img {\\n  transition: transform 0.5s;\\n}\\nmain .rotateY {\\n  transform: rotateY(360deg);\\n}\\nmain .rotateX {\\n  transform: rotateX(360deg);\\n}\\nmain .rotate {\\n  transform: rotate(360deg);\\n}\\n\\nfooter {\\n  height: 60px;\\n}\\n\\n.h1 {\\n  display: flex;\\n  justify-content: center;\\n  justify-items: center;\\n  font-size: 40px;\\n  padding: 10px;\\n  color: #3b3b3b;\\n  background-color: rgba(228, 152, 152, 0.808);\\n}\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/style/index.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nvar ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./reset.css */ \"./node_modules/css-loader/dist/cjs.js!./src/style/reset.css\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);\n// Module\nexports.push([module.i, \"html,\\nbody {\\n  margin: 0;\\n  padding: 0;\\n}\\n\\n.hidden {\\n  display: none;\\n}\\n\\n.scale-down-left {\\n  animation: scale-down-left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);\\n}\\n\\n@keyframes scale-down-left {\\n  0% {\\n    transform: scale(1);\\n    transform-origin: 0% 50%;\\n  }\\n  100% {\\n    transform: scale(0.5);\\n    transform-origin: 0% 50%;\\n  }\\n}\\n.scale-up-right {\\n  animation: scale-up-right 0.6s linear NaNs forwards;\\n}\\n\\n.header {\\n  height: 60px;\\n  padding: 50px 100px;\\n  display: flex;\\n  justify-content: space-between;\\n  align-items: center;\\n}\\n.header .logo__img {\\n  width: 200px;\\n  height: auto;\\n}\\n.header .menu {\\n  cursor: pointer;\\n}\\n.header .menu__text {\\n  font-size: 15px;\\n}\\n.header .menu__round {\\n  background-color: #ED1C24;\\n  color: white;\\n  display: inline-block;\\n  transform: rotate(90deg);\\n  font-weight: 900;\\n  padding: 20px;\\n  border-radius: 50%;\\n  margin-left: 10px;\\n}\\n.header .menu__round:hover {\\n  animation: rotate-scale-down 0.65s linear alternate-reverse backwards;\\n}\\n@keyframes rotate-scale-down {\\n  0% {\\n    transform: scale(1) rotateZ(0);\\n  }\\n  50% {\\n    transform: scale(0.5) rotateZ(180deg);\\n  }\\n  100% {\\n    transform: scale(1) rotateZ(360deg);\\n  }\\n}\\n\\n.main {\\n  min-height: calc(100vh - 120px);\\n  position: relative;\\n  margin: 0 auto;\\n  width: 90vw;\\n  background-color: rgba(0, 128, 0, 0.137);\\n}\\n.main .social {\\n  list-style: none;\\n  width: 60px;\\n  position: fixed;\\n  bottom: 100px;\\n  right: 3px;\\n}\\n.main .social__item {\\n  margin: 10px auto;\\n}\\n.main .social__link {\\n  display: block;\\n  text-align: center;\\n}\\n.main .social__link:focus {\\n  outline: none;\\n  border: red solid 1px;\\n  padding: 0;\\n  border-radius: 10%;\\n}\\n.main .social__link img {\\n  width: 32px;\\n  height: 32px;\\n  padding: 3px;\\n  transition: transform 0.5s;\\n}\\n.main .social__link img:hover {\\n  transform: rotateY(180deg);\\n}\\n.main .map {\\n  position: absolute;\\n  bottom: 116px;\\n  right: 20px;\\n}\\n.main .map iframe {\\n  width: 430px;\\n  height: 430px;\\n  border: none;\\n  border-radius: 12px;\\n}\\n\\nfooter {\\n  height: 60px;\\n  background-color: rgba(255, 0, 0, 0.349);\\n}\\n\\n.h1 {\\n  display: flex;\\n  justify-content: center;\\n  justify-items: center;\\n  font-size: 40px;\\n  padding: 10px;\\n  color: #3b3b3b;\\n  background-color: rgba(228, 152, 152, 0.808);\\n}\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/style/index.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -168,6 +168,42 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
+/***/ "./src/img/icons8-menu-64.png":
+/*!************************************!*\
+  !*** ./src/img/icons8-menu-64.png ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"img/icons8-menu-64.png\");\n\n//# sourceURL=webpack:///./src/img/icons8-menu-64.png?");
+
+/***/ }),
+
+/***/ "./src/img/icons8-phone-64.png":
+/*!*************************************!*\
+  !*** ./src/img/icons8-phone-64.png ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"img/icons8-phone-64.png\");\n\n//# sourceURL=webpack:///./src/img/icons8-phone-64.png?");
+
+/***/ }),
+
+/***/ "./src/img/icons8-phone-bubble-64.png":
+/*!********************************************!*\
+  !*** ./src/img/icons8-phone-bubble-64.png ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"img/icons8-phone-bubble-64.png\");\n\n//# sourceURL=webpack:///./src/img/icons8-phone-bubble-64.png?");
+
+/***/ }),
+
 /***/ "./src/img/icons8-pickup-point-64.png":
 /*!********************************************!*\
   !*** ./src/img/icons8-pickup-point-64.png ***!
@@ -200,7 +236,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style/index.scss */ \"./src/style/index.scss\");\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_index_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/logo.png */ \"./src/img/logo.png\");\n/* harmony import */ var _img_icons8_facebook_64_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/icons8-facebook-64.png */ \"./src/img/icons8-facebook-64.png\");\n/* harmony import */ var _img_icons8_instagram_64_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/icons8-instagram-64.png */ \"./src/img/icons8-instagram-64.png\");\n/* harmony import */ var _img_icons8_map_64_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/icons8-map-64.png */ \"./src/img/icons8-map-64.png\");\n/* harmony import */ var _img_icons8_pickup_point_64_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/icons8-pickup-point-64.png */ \"./src/img/icons8-pickup-point-64.png\");\n// import 'normalize-scss'\n\n\n\n\n\n\n\nconsole.log(\"hell world\");\n\nfacebook.onclick = function () {\n  this.classList.toggle('rotateY')\n}\n\ninsta.onclick = function () {\n  this.classList.toggle('rotateX')\n}\n\nmap.onclick = function () {\n  this.classList.toggle('rotate')\n}\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style/index.scss */ \"./src/style/index.scss\");\n/* harmony import */ var _style_index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_index_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/logo.png */ \"./src/img/logo.png\");\n/* harmony import */ var _img_icons8_facebook_64_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/icons8-facebook-64.png */ \"./src/img/icons8-facebook-64.png\");\n/* harmony import */ var _img_icons8_instagram_64_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/icons8-instagram-64.png */ \"./src/img/icons8-instagram-64.png\");\n/* harmony import */ var _img_icons8_map_64_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/icons8-map-64.png */ \"./src/img/icons8-map-64.png\");\n/* harmony import */ var _img_icons8_phone_64_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/icons8-phone-64.png */ \"./src/img/icons8-phone-64.png\");\n/* harmony import */ var _img_icons8_pickup_point_64_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../img/icons8-pickup-point-64.png */ \"./src/img/icons8-pickup-point-64.png\");\n/* harmony import */ var _img_icons8_phone_bubble_64_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../img/icons8-phone-bubble-64.png */ \"./src/img/icons8-phone-bubble-64.png\");\n/* harmony import */ var _img_icons8_menu_64_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../img/icons8-menu-64.png */ \"./src/img/icons8-menu-64.png\");\n// import 'normalize-scss'\n\n\n\n\n\n\n\n\n\n\n\nconsole.log(\"hell world\");\n\nconst map = document.getElementById('map')\nconst mapIcon = document.getElementById('mapIcon')\n\nmapIcon.addEventListener('click', showeMap)\n\nfunction showeMap(e) {\n  e.preventDefault();\n  console.log(map);\n  map.classList.toggle('hidden')\n}\n\n// facebook.onclick = function () {\n//   this.classList.toggle('rotateY')\n// }\n\n// insta.onclick = function () {\n//   this.classList.toggle('rotateX')\n// }\n\n// map.onclick = function () {\n//   this.classList.toggle('rotate')\n// }\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
