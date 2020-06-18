@@ -1,6 +1,7 @@
 @import "./reset.css";
 $heightFooter: 60px;
 $heightHeader: 60px;
+$heightFooterHeader: $heightHeader+$heightFooter;
 $height100: 100vh;
 
 html,
@@ -9,28 +10,144 @@ body {
   padding: 0;
 }
 
-main {
-  min-height: calc(#{$height100} - #{$heightFooter});
+.hidden {
+  display: none;
+}
 
-  img {
-    transition: transform 0.5s;
+.scale-down-left {
+  animation: scale-down-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+@keyframes scale-down-left {
+  0% {
+    transform: scale(1);
+    transform-origin: 0% 50%;
   }
 
-  .rotateY {
-    transform: rotateY(360deg);
+  100% {
+    transform: scale(0.5);
+    transform-origin: 0% 50%;
+  }
+}
+
+.scale-up-right {
+  animation: scale-up-right 0.6s linear NaNs forwards;
+}
+
+.header {
+  height: $heightHeader;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    &__img {
+      width: 200px;
+      height: auto;
+    }
   }
 
-  .rotateX {
-    transform: rotateX(360deg);
+  .menu {
+    cursor: pointer;
+
+    &__text {
+      font-size: 15px;
+    }
+
+    &__round {
+      background-color: #ED1C24;
+      color: white;
+      display: inline-block;
+      // cursor: pointer;
+      transform: rotate(90deg);
+      font-weight: 900;
+      padding: 20px;
+      border-radius: 50%;
+      margin-left: 10px;
+
+      &:hover {
+        animation: rotate-scale-down 0.65s linear alternate-reverse backwards;
+
+        @keyframes rotate-scale-down {
+          0% {
+            transform: scale(1) rotateZ(0);
+          }
+
+          50% {
+            transform: scale(0.5) rotateZ(180deg);
+          }
+
+          100% {
+            transform: scale(1) rotateZ(360deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.main {
+  min-height: calc(#{$height100} - #{$heightFooterHeader});
+  position: relative;
+  margin: 0 auto;
+  width: 90vw;
+
+  background-color: rgba(0, 128, 0, 0.137);
+
+  .social {
+    list-style: none;
+    width: 60px;
+    position: fixed;
+    bottom: 100px;
+    right: 3px;
+
+    &__item {
+      margin: 10px auto;
+    }
+
+    &__link {
+      display: block;
+      text-align: center;
+
+      &:focus {
+        outline: none;
+        border: red solid 1px;
+        padding: 0;
+        border-radius: 10%;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+        padding: 3px;
+        transition: transform 0.5s;
+
+        &:hover {
+          transform: rotateY(180deg);
+        }
+      }
+    }
   }
 
-  .rotate {
-    transform: rotate(360deg);
+  .map {
+    position: absolute;
+    bottom: 116px;
+    right: 20px;
+
+
+    iframe {
+      width: 430px;
+      height: 430px;
+      border: none;
+      border-radius: 12px;
+    }
   }
 }
 
 footer {
   height: $heightFooter;
+  background-color: rgba(255, 0, 0, 0.349);
 }
 
 .h1 {

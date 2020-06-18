@@ -9,15 +9,41 @@
 
 <body>
   <header class="header">
-    <div class="target"><img class="" src="./img/logo.png" alt="" srcset="">
+    <div class="logo">
+      <a href="/" class="logo__link">
+        <img class="logo__img" src="./img/logo.png"
+          alt="Мы лучшее что есть на рынке!"></a>
+    </div>
+    <div class="menu">
+      <span class="menu__text">menu</span>
+      <span class="menu__round">| | |</span>
     </div>
   </header>
   <main class="main">
-    <img class="rotateY" src="./img/icons8-facebook-64.png" alt=""
-      id="facebook">
-    <img class="rotateX" src="./img/icons8-instagram-64.png" alt="" id="insta">
-    <img class="rotate" src="./img/icons8-pickup-point-64.png" alt="" id="map">
 
+    <ul class="social">
+      <li class="social__item">
+        <a href="https://facebook.com" class="social__link" target="_blank"><img
+            src="./img/icons8-facebook-64.png"
+            alt="Сылка на нашь профиль в facebook"></a>
+      </li>
+      <li class="social__item"><a href="https://instagram.com"
+          class="social__link" target="_blank"><img
+            src="./img/icons8-instagram-64.png"
+            alt="Сылка на нашь профиль в instagram"></a>
+      </li>
+      <li class="social__item">
+        <a href="" class="social__link" target="_blank" id="mapIcon"><img
+            src="./img/icons8-pickup-point-64.png" alt="Где мы находимся"></a>
+      </li>
+      <li class="social__item"><a href="" class="social__link"
+          target="_blank"><img src="./img/icons8-phone-bubble-64.png"
+            alt=""></a></li>
+    </ul>
+    <div class="scale-down-left map hidden" id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.801279765142!2d32.050096615319625!3d46.94594464137403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5cb09f76af70f%3A0x51d678a16580892c!2z0L_RgNC-0YHQvy4g0JzQuNGA0LAsIDQ2LCDQndC40LrQvtC70LDQtdCyLCDQndC40LrQvtC70LDQtdCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDU0MDAw!5e0!3m2!1sru!2sua!4v1592509770646!5m2!1sru!2sua"></iframe>
+    </div>
   </main>
   <footer class="footer">
     <div>
