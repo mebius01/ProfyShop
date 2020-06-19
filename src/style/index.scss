@@ -14,80 +14,90 @@ body {
   display: none;
 }
 
-.scale-down-left {
-  animation: scale-down-left 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+.focus {
+  outline: none;
+  border: red solid 1px;
+  padding: 5px;
+  border-radius: 10%;
 }
 
-@keyframes scale-down-left {
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes pulse {
   0% {
-    transform: scale(1);
-    transform-origin: 0% 50%;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+    transform: scale3d(1.5, 1.5, 1.5);
   }
 
   100% {
-    transform: scale(0.5);
-    transform-origin: 0% 50%;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
 
-.scale-up-right {
-  animation: scale-up-right 0.6s linear NaNs forwards;
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
 }
 
 .header {
   height: $heightHeader;
-  padding: 50px 100px;
+  padding: 72px; // переделать
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   .logo {
     &__img {
-      width: 200px;
-      height: auto;
+      width: auto;
+      height: 100px;
     }
   }
 
   .menu {
     cursor: pointer;
 
+    &:active {
+      @extend .focus;
+    }
+
+    &:hover {
+      @extend .pulse;
+    }
+
     &__text {
-      font-size: 15px;
+      display: block;
+      font-size: 26px;
+      text-align: center;
+      color: #444444;
     }
 
     &__round {
-      background-color: #ED1C24;
-      // color: white;
-      display: inline-block;
-      // cursor: pointer;
-      // transform: rotate(90deg);
-      // font-weight: 900;
-      padding: 15px;
+      display: block;
       border-radius: 50%;
-      margin-left: 10px;
 
       img {
-       fill: white;
-        width: 15px;
-      height: 15px;
-      }
-
-      &:hover {
-        animation: rotate-scale-down 0.65s linear alternate-reverse backwards;
-
-        @keyframes rotate-scale-down {
-          0% {
-            transform: scale(1) rotateZ(0);
-          }
-
-          50% {
-            transform: scale(0.5) rotateZ(180deg);
-          }
-
-          100% {
-            transform: scale(1) rotateZ(360deg);
-          }
-        }
+        width: 62px;
+        height: 62px;
       }
     }
   }
@@ -98,18 +108,17 @@ body {
   position: relative;
   margin: 0 auto;
   width: 90vw;
-
-  background-color: rgba(0, 128, 0, 0.137);
+  border: solid 1px green;
 
   .social {
     list-style: none;
     width: 60px;
     position: fixed;
-    bottom: 100px;
-    right: 3px;
+    top: 190px;
+    right: 1px;
 
     &__item {
-      margin: 10px auto;
+      margin: 15px auto;
     }
 
     &__link {
@@ -117,20 +126,15 @@ body {
       text-align: center;
 
       &:focus {
-        outline: none;
-        border: red solid 1px;
-        padding: 0;
-        border-radius: 10%;
+        @extend .focus;
       }
 
       img {
         width: 32px;
         height: 32px;
-        padding: 3px;
-        transition: transform 0.5s;
 
         &:hover {
-          transform: rotateY(180deg);
+          @extend .pulse;
         }
       }
     }
@@ -140,7 +144,6 @@ body {
     position: absolute;
     bottom: 116px;
     right: 20px;
-
 
     iframe {
       width: 430px;
@@ -154,14 +157,4 @@ body {
 footer {
   height: $heightFooter;
   background-color: rgba(255, 0, 0, 0.349);
-}
-
-.h1 {
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  font-size: 40px;
-  padding: 10px;
-  color: rgb(59, 59, 59);
-  background-color: rgba(228, 152, 152, 0.808);
 }

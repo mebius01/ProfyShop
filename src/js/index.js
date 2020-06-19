@@ -1,13 +1,13 @@
 // import 'normalize-scss'
 import '../style/index.scss'
 import "../img/logo.png"
-import "../img/icons8-facebook-64.png"
-import "../img/icons8-instagram-64.png"
-import "../img/icons8-map-64.png"
-import "../img/icons8-phone-64.png"
-import "../img/icons8-pickup-point-64.png"
-import "../img/icons8-phone-bubble-64.png"
-import "../img/menu.svg"
+import "../img/facebook.svg"
+import "../img/instagram.svg"
+import "../img/google-maps.svg"
+import "../img/telephone.svg"
+import "../img/open-menu-1.svg"
+import "../img/open-menu-1.png"
+
 
 import "../img/icons8-menu-64.png"
 
