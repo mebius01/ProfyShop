@@ -9,8 +9,6 @@ import "../img/open-menu-1.svg"
 import "../img/open-menu-1.png"
 
 
-import "../img/icons8-menu-64.png"
-
 console.log("hell world");
 
 const map = document.getElementById('map')
