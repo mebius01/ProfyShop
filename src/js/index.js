@@ -7,6 +7,7 @@ import "../img/icons8-map-64.png"
 import "../img/icons8-phone-64.png"
 import "../img/icons8-pickup-point-64.png"
 import "../img/icons8-phone-bubble-64.png"
+import "../img/menu.svg"
 
 import "../img/icons8-menu-64.png"
 

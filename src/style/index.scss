@@ -57,14 +57,20 @@ body {
 
     &__round {
       background-color: #ED1C24;
-      color: white;
+      // color: white;
       display: inline-block;
       // cursor: pointer;
-      transform: rotate(90deg);
-      font-weight: 900;
-      padding: 20px;
+      // transform: rotate(90deg);
+      // font-weight: 900;
+      padding: 15px;
       border-radius: 50%;
       margin-left: 10px;
+
+      img {
+       fill: white;
+        width: 15px;
+      height: 15px;
+      }
 
       &:hover {
         animation: rotate-scale-down 0.65s linear alternate-reverse backwards;
