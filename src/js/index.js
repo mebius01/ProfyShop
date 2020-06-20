@@ -8,8 +8,17 @@ import "../img/telephone.svg"
 import "../img/open-menu-1.svg"
 import "../img/open-menu-1.png"
 
+const menu__point = document.querySelector('.menu__point')
+const menu__ul = document.querySelector('.menu__ul')
 
-console.log("hell world");
+menu__point.addEventListener('click', showeMenu)
+
+function showeMenu(e) {
+  e.preventDefault()
+  menu__ul.classList.toggle('hidden')
+  // menu__point.classList.toggle('rotateIn');
+  console.log(menu__point);
+}
 
 const map = document.getElementById('map')
 const mapIcon = document.getElementById('mapIcon')
@@ -21,15 +30,3 @@ function showeMap(e) {
   console.log(map);
   map.classList.toggle('hidden')
 }
-
-// facebook.onclick = function () {
-//   this.classList.toggle('rotateY')
-// }
-
-// insta.onclick = function () {
-//   this.classList.toggle('rotateX')
-// }
-
-// map.onclick = function () {
-//   this.classList.toggle('rotate')
-// }

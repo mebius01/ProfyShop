@@ -1,8 +1,10 @@
 @import "./reset.css";
+@import "./animation.css";
 $heightFooter: 60px;
-$heightHeader: 60px;
+$heightHeader: 200px;
 $heightFooterHeader: $heightHeader+$heightFooter;
 $height100: 100vh;
+$textColor: #444444;
 
 html,
 body {
@@ -28,43 +30,82 @@ body {
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      -webkit-transform: scale3d(1.5, 1.5, 1.5);
+      transform: scale3d(1.5, 1.5, 1.5);
+    }
+
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+      -webkit-transform: scale3d(1.5, 1.5, 1.5);
+      transform: scale3d(1.5, 1.5, 1.5);
+    }
+  }
 }
 
-@-webkit-keyframes pulse {
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  @-webkit-keyframes slideInRight {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  visibility: visible;
   }
-
-  50% {
-    -webkit-transform: scale3d(1.5, 1.5, 1.5);
-    transform: scale3d(1.5, 1.5, 1.5);
-  }
-
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
   }
+  }
+  @keyframes slideInRight {
+  0% {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  visibility: visible;
+  }
+  100% {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  }
+  } 
 }
 
-@keyframes pulse {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale3d(1.5, 1.5, 1.5);
-    transform: scale3d(1.5, 1.5, 1.5);
-  }
+.flex-col-centr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
   height: $heightHeader;
-  padding: 72px; // переделать
+  padding: 0 72px; // переделать
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: relative;
 
   .logo {
     &__img {
@@ -74,31 +115,46 @@ body {
   }
 
   .menu {
-    cursor: pointer;
 
-    &:active {
-      @extend .focus;
-    }
+    &__point {
+      @extend .flex-col-centr;
+      cursor: pointer;
 
-    &:hover {
-      @extend .pulse;
-    }
+      &:active {
+        @extend .focus;
+      }
 
-    &__text {
-      display: block;
-      font-size: 26px;
-      text-align: center;
-      color: #444444;
-    }
-
-    &__round {
-      display: block;
-      border-radius: 50%;
-
-      img {
+      &:hover {
+        @extend .pulse;
+      }
+      .menu__icon {
         width: 62px;
         height: 62px;
+        display: block;
       }
+      .menu__text {
+        display: block;
+        font-size: 26px;
+        text-align: center;
+        color: #444444;
+      }
+    }
+    &__ul {
+      position: absolute;
+      top: 25px;
+      right: 160px;
+    }
+    &__item {
+      list-style: none;
+    }
+    &__link {
+      display: block;
+      text-decoration: none;
+      color: $textColor;
+      padding: 5px;
+      margin: 7px 0;
+      border: 1px solid $textColor;
+      border-radius: 5px;
     }
   }
 }
