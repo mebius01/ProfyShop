@@ -1,85 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="logo">
-        <a href="/" class="logo__link">
-          <img
-            class="logo__img"
-            src="./img/logo.png"
-            alt="Мы лучшее что есть на рынке!"
-        /></a>
-      </div>
-      <div class="menu">
-        <div class="menu__point">
-          <img
-            class="menu__icon"
-            src="./img/open-menu-1.png"
-            alt=""
-            srcset=""
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-          <span class="menu__text">menu</span>
-        </div>
-        <ul class="menu__ul slideInLeft hidden">
-          <li class="menu__item">
-            <a href="" class="menu__link">menu item 1</a>
-          </li>
-          <li class="menu__item">
-            <a href="" class="menu__link">menu item 2</a>
-          </li>
-          <li class="menu__item">
-            <a href="" class="menu__link">menu item 3</a>
-          </li>
-          <li class="menu__item">
-            <a href="" class="menu__link">menu item 4</a>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <main class="main">
-      <ul class="social">
-        <li class="social__item">
-          <a href="https://facebook.com" class="social__link" target="_blank"
-            ><img
-              src="./img/facebook.svg"
-              alt="Сылка на нашь профиль в facebook"
-          /></a>
-        </li>
-        <li class="social__item">
-          <a href="https://instagram.com" class="social__link" target="_blank"
-            ><img
-              src="./img/instagram.svg"
-              alt="Сылка на нашь профиль в instagram"
-          /></a>
-        </li>
-        <li class="social__item">
-          <a href="" class="social__link" target="_blank" id="mapIcon"
-            ><img src="./img/google-maps.svg" alt="Где мы находимся"
-          /></a>
-        </li>
-        <li class="social__item">
-          <a href="" class="social__link" target="_blank"
-            ><img src="./img/telephone.svg" alt=""
-          /></a>
-        </li>
-      </ul>
-      <div class="scale-down-left map hidden" id="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.801279765142!2d32.050096615319625!3d46.94594464137403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5cb09f76af70f%3A0x51d678a16580892c!2z0L_RgNC-0YHQvy4g0JzQuNGA0LAsIDQ2LCDQndC40LrQvtC70LDQtdCyLCDQndC40LrQvtC70LDQtdCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDU0MDAw!5e0!3m2!1sru!2sua!4v1592509770646!5m2!1sru!2sua"
-        ></iframe>
-      </div>
-    </main>
-    <footer class="footer">
-      <div>
-        <span>FOOTER</span>
-      </div>
-    </footer>
-  <script src="js/app.js"></script></body>
+<body>
+  <header class="header">
+    <div class="strip blue"><span class="strict-letter">P</span></div>
+    <div class="strip green"><span class="strict-letter">R</span><span
+        class="soft-letter">S</span></div>
+    <div class="strip red"><span class="strict-letter">O</span><span
+        class="soft-letter">h</span></div>
+    <div class="strip orange"><span class="strict-letter">F</span><span
+        class="soft-letter">o</span></div>
+    <div class="strip yellow"><span class="strict-letter">Y</span><span
+        class="soft-letter">p</span></div>
+  </header>
+  <ul class="contact">
+    <li class="contact__item cool_link">
+      <img class="contact__icon" src="./img/address.svg" alt="" srcset="">
+      <a href="" class="contact__link">ул. Космонавтов, д 142/12</a>
+    </li>
+    <li class="contact__item cool_link">
+      <img src="./img/phone.svg" alt="" srcset="" class="contact__icon">
+      <a href="tel:+380501231268" class="contact__link">+38(050)-123-12-68</a>
+    </li>
+    <li class="contact__item">
+      <img src="./img/time-and-date.svg" alt="" srcset="" class="contact__icon">
+      <span class="contact__text">10.00 - 17.00</span>
+    </li>
+    <li class="contact__item cool_link">
+      <img src="./img/mail.svg" alt="" srcset="" class="contact__icon">
+      <a href="mailto:top-shop-top@gmail.com"
+        class="contact__link">top-shop-top@gmail.com</a>
+    </li>
+  </ul>
+  <main class="main">
+    <ul class="category">
+      <li class="category__item">
+        <a href="" class="category__link">
+          <h2 class="h2">Category
+            1</h2>
+        </a>
+        <div class="category__line"></div>
+        <span class="category__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          saepe voluptatem excepturi blanditiis iste unde cum, rem voluptate
+          quos ipsam iusto ab debitis esse eius consequatur dolorem aliquam.
+          Enim, eos.
+        </span>
+      </li>
+      <li class="category__item">
+        <a href="" class="category__link">
+          <h2 class="h2">Category
+            1</h2>
+        </a>
+        <div class="category__line"></div>
+        <span class="category__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          saepe voluptatem excepturi blanditiis iste unde cum, rem voluptate
+          quos ipsam iusto ab debitis esse eius consequatur dolorem aliquam.
+          Enim, eos.
+        </span>
+      </li>
+      <li class="category__item">
+        <a href="" class="category__link">
+          <h2 class="h2">Category
+            1</h2>
+        </a>
+        <div class="category__line"></div>
+        <span class="category__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          saepe voluptatem excepturi blanditiis iste unde cum, rem voluptate
+          quos ipsam iusto ab debitis esse eius consequatur dolorem aliquam.
+          Enim, eos.
+        </span>
+      </li>
+      <li class="category__item">
+        <a href="" class="category__link">
+          <h2 class="h2">Category
+            1</h2>
+        </a>
+        <div class="category__line"></div>
+        <span class="category__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          saepe voluptatem excepturi blanditiis iste unde cum, rem voluptate
+          quos ipsam iusto ab debitis esse eius consequatur dolorem aliquam.
+          Enim, eos.
+        </span>
+      </li>
+      <li class="category__item">
+        <a href="" class="category__link">
+          <h2 class="h2">Category
+            1</h2>
+        </a>
+        <div class="category__line"></div>
+        <span class="category__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          saepe voluptatem excepturi blanditiis iste unde cum, rem voluptate
+          quos ipsam iusto ab debitis esse eius consequatur dolorem aliquam.
+          Enim, eos.
+        </span>
+      </li>
+
+    </ul>
+    <ul class="social">
+      <li class="social__item"><a href="https://facebook.com"
+          class="social__link" target="_blank"><img src="./img/facebook.svg"
+            alt="Сылка на нашь профиль в facebook" /></a></li>
+      <li class="social__item"><a href="https://instagram.com"
+          class="social__link" target="_blank"><img src="./img/instagram.svg"
+            alt="Сылка на нашь профиль в instagram" /></a></li>
+      <li class="social__item"><a href="" class="social__link" target="_blank"
+          id="mapIcon"><img src="./img/google-maps.svg"
+            alt="Где мы находимся" /></a></li>
+      <li class="social__item"><a href="" class="social__link"
+          target="_blank"><img src="./img/telephone.svg" alt="" /></a></li>
+    </ul>
+  </main>
+  <footer class="footer"></footer>
+<script src="js/app.js"></script></body>
+
 </html>
