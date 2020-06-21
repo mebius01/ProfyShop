@@ -62,6 +62,39 @@ body {
 
 }
 
+.cool_link a {
+  position: relative;
+  color: $textColor;
+  /*задаём цвет ссылки*/
+  cursor: pointer;
+  line-height: 1;
+  /*задаём высоту строки*/
+  text-decoration: none;
+  /*убираем подчёркивание*/
+}
+
+.cool_link a:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  width: 0;
+  /*задаём длинну линии до наведения курсора*/
+  height: 4px;
+  /*задаём ширину линии*/
+  background-color: rgba(255, 55, 55, 0.5);
+  /*задаём цвет линии*/
+  content: "";
+  transition: width 0.1s ease-out;
+  /*задаём время анимации*/
+}
+
+.cool_link a:hover:after,
+.cool_link a:focus:after {
+  width: 100%;
+  /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
 .hidden {
   display: none;
 }
@@ -74,9 +107,8 @@ body {
 
 .focus {
   outline: none;
-  border: red solid 1px;
+  border: rgba(255, 55, 55, 0.5) solid 4px;
   padding: 5px;
-  border-radius: 10%;
 }
 
 .pulse {
@@ -401,6 +433,7 @@ body {
     padding: 40px;
     width: 80vh;
 
+
     &__item {
       padding-bottom: 20px;
     }
@@ -408,13 +441,17 @@ body {
     &__line {
       height: 4px;
       width: 100%;
-      background-color: rgba(255, 55, 55, 0.5);
+      background-color: rgb(55, 128, 55, 0.5);
       margin-bottom: 18px;
     }
 
     &__link {
       display: block;
       text-decoration: none;
+
+      &:focus {
+        @extend .focus;
+      }
     }
 
     &__text {
@@ -467,39 +504,4 @@ footer {
   align-items: center;
 
   padding: 0 40px;
-}
-
-
-
-.cool_link a {
-  position: relative;
-  color: $textColor;
-  /*задаём цвет ссылки*/
-  cursor: pointer;
-  line-height: 1;
-  /*задаём высоту строки*/
-  text-decoration: none;
-  /*убираем подчёркивание*/
-}
-
-.cool_link a:after {
-  display: block;
-  position: absolute;
-  left: 0;
-  /*изменить на right:0;, чтобы изменить направление подчёркивания */
-  width: 0;
-  /*задаём длинну линии до наведения курсора*/
-  height: 4px;
-  /*задаём ширину линии*/
-  background-color: rgba(255, 55, 55, 0.5);
-  /*задаём цвет линии*/
-  content: "";
-  transition: width 0.1s ease-out;
-  /*задаём время анимации*/
-}
-
-.cool_link a:hover:after,
-.cool_link a:focus:after {
-  width: 100%;
-  /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }
