@@ -1,19 +1,28 @@
 @import "./reset.css";
 @import "./animation.css";
-$heightFooter: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Rubik:wght@300;400;500;700;900&display=swap');
+$heightFooter: 30px;
 $heightHeader: 200px;
 $heightFooterHeader: $heightHeader+$heightFooter;
 $height100: 100vh;
 $textColor: #444444;
+$branColor: #F60203;
 
 html,
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Rubik', sans-serif;
 }
 
 .hidden {
   display: none;
+}
+
+.h2 {
+  padding-bottom: 10px;
+  color: rgb(99, 99, 99);
+  font-size: 26px;
 }
 
 .focus {
@@ -30,6 +39,7 @@ body {
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+
   @-webkit-keyframes pulse {
     0% {
       -webkit-transform: scale3d(1, 1, 1);
@@ -60,6 +70,23 @@ body {
   }
 }
 
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
@@ -67,29 +94,124 @@ body {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+
   @-webkit-keyframes slideInRight {
-  0% {
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  visibility: visible;
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      visibility: visible;
+    }
+
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
   }
-  100% {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  }
-  }
+
   @keyframes slideInRight {
-  0% {
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-  visibility: visible;
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      visibility: visible;
+    }
+
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
   }
-  100% {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  }
-  } 
 }
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  @-webkit-keyframes shake {
+
+    0%,
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: translate3d(-10px, 0, 0);
+      transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+      -webkit-transform: translate3d(10px, 0, 0);
+      transform: translate3d(10px, 0, 0);
+    }
+  }
+
+  @keyframes shake {
+
+    0%,
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: translate3d(-10px, 0, 0);
+      transform: translate3d(-10px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+      -webkit-transform: translate3d(10px, 0, 0);
+      transform: translate3d(10px, 0, 0);
+    }
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 
 .flex-col-centr {
   display: flex;
@@ -99,87 +221,178 @@ body {
 }
 
 .header {
-  height: $heightHeader;
-  padding: 0 72px; // переделать
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   position: relative;
+  height: $heightHeader;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-  .logo {
-    &__img {
-      width: auto;
-      height: 100px;
+  .strip {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vh;
+    color: white;
+
+    &:hover {
+      @extend .shake;
     }
-  }
 
-  .menu {
-
-    &__point {
-      @extend .flex-col-centr;
-      cursor: pointer;
-
-      &:active {
-        @extend .focus;
-      }
-
-      &:hover {
-        @extend .pulse;
-      }
-      .menu__icon {
-        width: 62px;
-        height: 62px;
-        display: block;
-      }
-      .menu__text {
-        display: block;
-        font-size: 26px;
-        text-align: center;
-        color: #444444;
-      }
-    }
-    &__ul {
-      position: absolute;
-      top: 25px;
-      right: 160px;
-    }
-    &__item {
-      list-style: none;
-    }
-    &__link {
+    span {
       display: block;
-      text-decoration: none;
-      color: $textColor;
-      padding: 5px;
-      margin: 7px 0;
-      border: 1px solid $textColor;
-      border-radius: 5px;
+    }
+
+    .strict-letter {
+      font-family: 'Rubik', sans-serif;
+      font-size: 70px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      border-bottom: 6px white solid;
+    }
+
+    .soft-letter {
+      font-family: 'Mr De Haviland', cursive;
+      font-size: 70px;
+      font-weight: 500;
+      color: black;
+
     }
   }
+
+  .red {
+    position: relative;
+    left: -22vh;
+    background-color: red;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+
+  .orange {
+    position: relative;
+    left: -33vh;
+    background-color: orange;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    // color: $textColor;
+
+  }
+
+  .yellow {
+    position: relative;
+    left: -44vh;
+    background-color: #FF00FF;
+    // clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    // color: $textColor;
+  }
+
+  .green {
+    position: relative;
+    left: -11vh;
+    background-color: green;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+
+  .blue {
+    background-color: blue;
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  }
+
+}
+
+.contact {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  // border: 1px red solid;
+
+  color: $textColor;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+  // padding: 0 20px 0 20px;
+
+  width: 40vh;
+  height: $heightHeader;
+
+  .contact__item {
+    margin-bottom: 5px;
+  }
+
+  .contact__icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+
+  }
+
+  &__link,
+  &__text {
+    text-decoration: none;
+    color: $textColor;
+
+    &:focus {
+      @extend .focus;
+    }
+  }
+
+  // &:hover {
+  //   @extend .shake;
+  // }
 }
 
 .main {
-  min-height: calc(#{$height100} - #{$heightFooterHeader});
-  position: relative;
-  margin: 0 auto;
-  width: 90vw;
-  border: solid 1px green;
+  min-height: 100vh;
+  // background-color: pink;
+
+  .category {
+    list-style: none;
+    padding: 40px;
+    width: 80vh;
+
+    &__item {
+      padding-bottom: 20px;
+    }
+
+    &__line {
+      height: 5px;
+      width: 100%;
+      background-color: rgba(255, 0, 0, 0.5);
+      margin-bottom: 18px;
+    }
+
+    &__link {
+      display: block;
+      text-decoration: none;
+    }
+
+    &__text {
+      color: $textColor;
+      font-size: 13px;
+    }
+  }
 
   .social {
     list-style: none;
     width: 60px;
     position: fixed;
-    top: 190px;
-    right: 1px;
+    top: 200px;
+    right: 0px;
 
     &__item {
-      margin: 15px auto;
+      margin: 5px auto;
     }
 
     &__link {
       display: block;
       text-align: center;
+      background-color: white;
+      padding: 13px;
+      border-radius: 50%;
 
       &:focus {
         @extend .focus;
@@ -195,22 +408,42 @@ body {
       }
     }
   }
-
-  .map {
-    position: absolute;
-    bottom: 116px;
-    right: 20px;
-
-    iframe {
-      width: 430px;
-      height: 430px;
-      border: none;
-      border-radius: 12px;
-    }
-  }
 }
 
 footer {
+  background-color: #FF00FF;
   height: $heightFooter;
-  background-color: rgba(255, 0, 0, 0.349);
+}
+
+.cool_link a {
+  position: relative;
+  color: $textColor;
+  /*задаём цвет ссылки*/
+  cursor: pointer;
+  line-height: 1;
+  /*задаём высоту строки*/
+  text-decoration: none;
+  /*убираем подчёркивание*/
+}
+
+.cool_link a:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  width: 0;
+  /*задаём длинну линии до наведения курсора*/
+  height: 1px;
+  /*задаём ширину линии*/
+  background-color: $textColor;
+  /*задаём цвет линии*/
+  content: "";
+  transition: width 0.2s ease-out;
+  /*задаём время анимации*/
+}
+
+.cool_link a:hover:after,
+.cool_link a:focus:after {
+  width: 100%;
+  /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
 }

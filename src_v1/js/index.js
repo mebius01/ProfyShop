@@ -7,11 +7,6 @@ import "../img/google-maps.svg"
 import "../img/telephone.svg"
 import "../img/open-menu-1.svg"
 import "../img/open-menu-1.png"
-import "../img/address.svg"
-import "../img/productivity.svg"
-import "../img/mail.svg"
-import "../img/phone.svg"
-import "../img/time-and-date.svg"
 
 const menu__point = document.querySelector('.menu__point')
 const menu__ul = document.querySelector('.menu__ul')
