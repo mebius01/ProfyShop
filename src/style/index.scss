@@ -1,6 +1,7 @@
 @import "./reset.css";
 @import "./animation.css";
 @import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Rubik:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 $heightFooter: 30px;
 $heightHeader: 200px;
 $heightFooterHeader: $heightHeader+$heightFooter;
@@ -74,9 +75,8 @@ body {
 
 .focus {
   outline: none;
-  border: red solid 1px;
+  border: rgba(255, 55, 55, 0.5) solid 4px;
   padding: 5px;
-  border-radius: 10%;
 }
 
 .pulse {
@@ -296,136 +296,141 @@ body {
       font-size: 70px;
       font-weight: 400;
       margin-bottom: 20px;
-      border-bottom: 6px white solid;
+      border-bottom: 4px white solid;
     }
 
     .soft-letter {
-      font-family: 'Mr De Haviland', cursive;
-      font-size: 70px;
-      font-weight: 500;
+      font-family: 'Kaushan Script', cursive;
+      font-size: 60px;
+      // font-weight: 400;
       color: black;
 
     }
   }
 
   .red {
-    position: relative;
-    left: -22vh;
+    // position: relative;
+    // left: -22vh;
     background-color: red;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   }
 
   .orange {
-    position: relative;
-    left: -33vh;
+    // position: relative;
+    // left: -33vh;
     background-color: orange;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     // color: $textColor;
 
   }
 
   .yellow {
-    position: relative;
-    left: -44vh;
+    // position: relative;
+    // left: -44vh;
     background-color: #FF00FF;
     // clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     // color: $textColor;
   }
 
   .green {
-    position: relative;
-    left: -11vh;
+    // position: relative;
+    // left: -11vh;
     background-color: green;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   }
 
   .blue {
     background-color: blue;
-    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+    // clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
   }
-
 }
 
-.contact {
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+// .contact {
+//   padding-top: 20px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: flex-start;
 
-  // border: 1px red solid;
+//   // border: 1px red solid;
 
-  color: $textColor;
-  position: absolute;
-  right: 0px;
-  top: 0px;
+//   color: $textColor;
+//   position: absolute;
+//   right: 0px;
+//   top: 0px;
 
-  // padding: 0 20px 0 20px;
+//   // padding: 0 20px 0 20px;
 
-  width: 40vh;
-  height: $heightHeader;
+//   width: 40vh;
+//   height: $heightHeader;
 
-  .contact__item {
-    margin-bottom: 5px;
-  }
+//   .contact__item {
+//     margin-bottom: 5px;
+//   }
 
-  .contact__icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
+//   .contact__icon {
+//     width: 24px;
+//     height: 24px;
+//     margin-right: 12px;
 
-  }
+//   }
 
-  &__link,
-  &__text {
-    text-decoration: none;
-    color: $textColor;
+//   &__link,
+//   &__text {
+//     text-decoration: none;
+//     color: $textColor;
 
-    &:focus {
-      @extend .focus;
-    }
-  }
+//     &:focus {
+//       @extend .focus;
+//     }
+//   }
 
-  // &:hover {
-  //   @extend .shake;
-  // }
-}
+//   // &:hover {
+//   //   @extend .shake;
+//   // }
+// }
 
 .main {
   min-height: 100vh;
   // background-color: pink;
 
-  .category {
-    list-style: none;
-    padding: 40px;
-    width: 80vh;
+  // .category {
+  //   list-style: none;
+  //   padding: 60px;
+  //   // width: 80vh;
 
-    &__item {
-      padding-bottom: 20px;
-    }
+  //   &__item {
+  //     padding-bottom: 20px;
+  //   }
 
-    &__line {
-      height: 4px;
-      width: 100%;
-      background-color: rgba(255, 55, 55, 0.5);
-      margin-bottom: 18px;
-    }
+  //   // &__line {
+  //   //   height: 4px;
+  //   //   width: 100%;
+      
+  //   //   margin-bottom: 18px;
+  //   // }
 
-    &__link {
-      display: block;
-      text-decoration: none;
-    }
+  //   &__link {
+  //     display: block;
+  //     text-decoration: none;
+  //     border-bottom:rgba(255, 55, 55, 0.5) solid 4px;
+  //     margin-bottom: 10px;
 
-    &__text {
-      color: $textColor;
-      font-size: 13px;
-    }
-  }
+  //   &:focus {
+  //       @extend .focus;
+  //     }
+  //   }
+
+  //   &__text {
+  //     color: $textColor;
+  //     font-size: 13px;
+  //   }
+  // }
 
   .social {
     list-style: none;
-    width: 60px;
+    // width: 60px;
     position: fixed;
     top: 200px;
     right: 0px;
@@ -438,8 +443,7 @@ body {
       display: block;
       text-align: center;
       background-color: white;
-      padding: 13px;
-      border-radius: 50%;
+      padding: 5px;
 
       &:focus {
         @extend .focus;
@@ -491,7 +495,7 @@ footer {
   /*задаём длинну линии до наведения курсора*/
   height: 4px;
   /*задаём ширину линии*/
-  background-color: rgba(255, 55, 55, 0.5);
+  background-color: #ff373780;
   /*задаём цвет линии*/
   content: "";
   transition: width 0.1s ease-out;
