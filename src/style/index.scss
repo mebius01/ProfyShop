@@ -9,10 +9,26 @@ $height100: 100vh;
 $textColor: #444444;
 $branColor: #F60203;
 
+.stretch {
+  animation-name: stretch;
+  transition: 1s;
+
+  @keyframes stretch {
+    0% {
+      transform: scaleY(1, 1);
+    }
+
+    50% {
+      transform: scaleY(1.5, 1.5);
+    }
+  }
+}
+
 .pulse {
   animation-name: pulse;
   animation-duration: 0.5s;
   animation-fill-mode: both;
+
 
   @keyframes pulse {
     0% {
@@ -158,6 +174,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
+    margin-bottom: 40px;
     // border-bottom: solid 3px;
 
     &__img {
@@ -198,11 +215,11 @@ body {
       }
 
       &:hover {
-        @extend .pulse;
+        @extend .stretch;
         top: 0;
-        left: 0;
+        // left: 0;
         height: 85%;
-        width: 100%;
+        // width: 100%;
         padding: 30px;
       }
     }
