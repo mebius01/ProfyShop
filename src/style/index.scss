@@ -302,7 +302,6 @@ body {
 
   .brand {
     @extend .contact;
-    // background-color: $footerColor;
     padding: 10px 40px;
 
     &__link {
@@ -314,7 +313,7 @@ body {
     }
 
     &__icon {
-      width: 180px;
+      width: 100px;
       height: auto;
     }
   }
@@ -350,6 +349,10 @@ body {
     // justify-content: space-between;
     // align-items: center;
     padding: 10px 40px;
+    img {
+      height: 30px;
+      width: auto;
+    }
   }
 }
 
