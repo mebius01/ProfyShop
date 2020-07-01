@@ -13,6 +13,7 @@ import "../img/productivity.svg"
 import "../img/mail.svg"
 import "../img/phone.svg"
 import "../img/time-and-date.svg"
+import "../img/1.jpg"
 
 import "../img/satara_logo.png"
 import "../img/laRossa_logo.png"

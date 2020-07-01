@@ -171,8 +171,40 @@ body {
   min-height: 100vh;
   width: 80%;
   margin: 40px auto;
-  border: red solid;
+  // border: red solid;
 
+  .article {
+    &__img {
+      height: 444px;
+      width: auto;
+      text-align: right;
+    }
+
+    &__content {
+      background-color: rgba(255, 255, 255, 0.7);
+      position: relative;
+      top: -222 - 90 - 40px; //!!!!!!!!!
+      height: 160px;
+      width: 50%;
+      padding: 40px 0;
+      transition: padding 1s;
+      @extend .flex-col-centr;
+      align-items: flex-start;
+
+      &:hover {
+        padding: 80px 0;
+      }
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+
+    &__link {
+      text-decoration: none;
+      display: block;
+    }
+  }
 }
 
 .social {
@@ -206,7 +238,6 @@ body {
     }
   }
 }
-
 
 .footer {
   background-color: $footerColor;
