@@ -173,17 +173,27 @@ body {
   min-height: 100vh;
   width: 80%;
   margin: 40px auto;
-  // border: red solid;
+
+  // @media (min-width: 600px) and (max-width: 1199px) {
+  //   width: 85%;
+  // }
+  @media (min-width: 320px) and (max-width: 600px) {
+    width: 100%;
+    margin: 20px auto;
+  }
+
 
   .article {
-    height: 444px;
+    $heightArticle: 444px;
+    $paddingContent: 40px;
+    height: $heightArticle;
     margin-bottom: 88px;
-    // border: red solid 1px;
 
     &__img {
       text-align: right;
+
       img {
-        height: 444px;
+        height: $heightArticle;
         width: 100%;
         object-fit: cover;
       }
@@ -193,7 +203,7 @@ body {
       background-color: rgba(255, 255, 255, 0.5);
       color: $footerColor;
       position: relative;
-      top: -222 - 80 - 40px; //!!!!!!!!!
+      top: -$heightArticle/2 - $paddingContent*2 - $paddingContent; //!!!!!!!!!
       height: 160px;
       width: 50%;
       padding: 40px 10px;
@@ -203,6 +213,11 @@ body {
       align-items: flex-start;
       // border: red solid 2px;
 
+      @media (min-width: 320px) and (max-width: 600px) {
+        width: auto;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
       .article__title {
         transition-property: border-bottom color;
         transition-duration: 0.3s;
@@ -210,12 +225,20 @@ body {
 
       .fa-long-arrow-alt-right {
         position: relative;
-        top: -36px;
-        right: -450px;
+        top: -40px;
+        right: -100vh + 30;
         color: $footerColor;
         font-size: 20px;
         transition-property: font-size color;
         transition-duration: 0.5s;
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+          right: -100vh + 35;
+        }
+
+        @media (min-width: 320px) and (max-width: 991px) {
+          display: none;
+        }
       }
 
       &:hover {
@@ -231,14 +254,20 @@ body {
         .article__title {
           border-bottom: 3px $redLine solid;
         }
+
+        @media (min-width: 320px) and (max-width: 600px) {
+          border-top: 1px solid rgba(189, 189, 189, 0.3);
+          border-bottom: 1px solid rgba(189, 189, 189, 0.3);
+        }
       }
     }
 
     &__text {
+      margin-top: 15px;
       font-size: 18px;
       line-height: 20px;
     }
-    
+
     &__link {
       text-decoration: none;
       display: block;
@@ -279,6 +308,10 @@ body {
         @extend .pulse;
       }
     }
+  }
+
+  @media (min-width: 320px) and (max-width: 600px) {
+    display: none;
   }
 }
 
@@ -374,6 +407,7 @@ body {
 
       .contact,
       .form {
+
         padding: 10px;
       }
 
