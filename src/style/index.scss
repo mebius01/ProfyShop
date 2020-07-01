@@ -94,8 +94,10 @@ body {
 
 .focus {
   outline: none;
-  border: $redLine solid 4px;
-  padding: 5px;
+  border: $redLine solid 3px;
+  padding: 4px;
+  transition-property: border;
+  transition-duration: 0.3s;
 }
 
 .flex-col-centr {
@@ -236,10 +238,14 @@ body {
       font-size: 18px;
       line-height: 20px;
     }
-
+    
     &__link {
       text-decoration: none;
       display: block;
+
+      &:focus {
+        @extend .focus;
+      }
     }
   }
 }
