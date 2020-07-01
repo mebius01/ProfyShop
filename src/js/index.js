@@ -16,7 +16,7 @@ import "../img/time-and-date.svg"
 import "../img/1.jpg"
 import "../img/2.jpg"
 import "../img/3.jpg"
-import "../img/arrow.svg"
+// import "../img/arrow.svg"
 
 import "../img/satara_logo.png"
 import "../img/laRossa_logo.png"
