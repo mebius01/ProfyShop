@@ -181,18 +181,34 @@ body {
     }
 
     &__content {
-      background-color: rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 255, 255, 0.5);
       position: relative;
-      top: -222 - 90 - 40px; //!!!!!!!!!
+      top: -222 - 80 - 40px; //!!!!!!!!!
       height: 160px;
       width: 50%;
       padding: 40px 0;
-      transition: padding 1s;
+      transition-property: top padding background-color;
+      transition-duration: 1s;
       @extend .flex-col-centr;
       align-items: flex-start;
 
+      .article__arrow {
+        position: relative;
+        top: -50px;
+        right: -550px;
+        height: 40px;
+        width: auto;
+        display: none;
+      }
+
       &:hover {
-        padding: 80px 0;
+        background-color: white;
+        top: -222 - 80 - 143px;
+        padding: 143px 0;
+
+        // .article__arrow {
+        //   display: block;
+        // }
       }
     }
 
