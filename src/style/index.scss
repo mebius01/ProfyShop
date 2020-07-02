@@ -13,20 +13,70 @@ $textColor: #444444;
 $branColor: #530405;
 $footerColor: #373f48;
 
-.stretch {
-  animation-name: stretch;
-  transition: 1s;
+.zoomIn {
+  animation-name: zoomIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 
-  @keyframes stretch {
+  @-webkit-keyframes zoomIn {
     0% {
-      transform: scaleY(1, 1);
+      opacity: 0;
+      transform: scale3d(.3, .3, .3);
     }
 
     50% {
-      transform: scaleY(1.5, 1.5);
+      opacity: 1;
+    }
+  }
+
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+      opacity: 1;
     }
   }
 }
+
+.zoomOut {
+  animation-name: zoomOut;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+  @-webkit-keyframes zoomOut {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+      transform: scale3d(.3, .3, .3);
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes zoomOut {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+      transform: scale3d(.3, .3, .3);
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
 
 .pulse {
   animation-name: pulse;
@@ -82,7 +132,6 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-
 .h2 {
   padding-bottom: 10px;
   color: #373f48;
@@ -90,6 +139,7 @@ body {
   line-height: 38px;
   font-weight: 500;
   text-transform: uppercase;
+
   @media (min-width: 320px) and (max-width: 640px) {
     font-size: 23px;
   }
@@ -109,6 +159,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 
 .header {
   position: relative;
@@ -148,11 +199,14 @@ body {
       color: black;
 
     }
+
     @media (min-width: 320px) and (max-width: 640px) {
       height: $heightHeader / 2;
+
       .strict-letter {
         font-size: 40px;
       }
+
       .soft-letter {
         font-size: 30px;
       }
@@ -184,6 +238,7 @@ body {
 .main {
   width: 80%;
   margin: 40px auto;
+
   @media (min-width: 320px) and (max-width: 640px) {
     width: 100%;
     margin: -20px auto;
@@ -194,9 +249,11 @@ body {
     $paddingContent: 40px;
     height: $heightArticle;
     margin-bottom: 88px;
+
     @media (min-width: 320px) and (max-width: 640px) {
-        margin-bottom: 44px;
+      margin-bottom: 44px;
     }
+
     &__img {
       text-align: right;
 
@@ -225,9 +282,11 @@ body {
         width: auto;
         background-color: rgba(255, 255, 255, 0.5);
       }
+
       @media (min-width: 641px) and (max-width: 940px) {
         width: 80%;
       }
+
       .article__title {
         transition-property: border-bottom color;
         transition-duration: 0.3s;
@@ -293,9 +352,9 @@ body {
   right: 0px;
 
   @media (min-width: 320px) and (max-width: 640px) {
-      top: $heightHeader - 60;
-      z-index: 1;
-    }
+    top: $heightHeader - 60;
+    z-index: 1;
+  }
 
   &__item {
     margin: 5px auto;
@@ -322,71 +381,41 @@ body {
     }
   }
 }
+
 .map {
-  // display: none;
+  display: none;
   cursor: pointer;
   width: 100%;
   height: 100%;
-  margin: auto;
+  // margin: auto;
   background-color: rgba(173, 173, 173, 0.5);
   text-align: center;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  .r-text {
-    display: block;
-    position: absolute;
-    top: 40%;
-    right: 5%;
-    writing-mode: tb-rl;
-    transform:rotate(360deg);
-    font-size:20px;
-    color: $redLine;
-  }
-  .l-text {
-    display: block;
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    writing-mode: tb-rl;
-    transform:rotate(360deg);
-    font-size:20px;
-    color: $redLine;
-  }
-  .t-text{
-    display: block;
-    position: absolute;
-    top: 1%;
-    left: 50%;
-    // writing-mode: tb-rl;
-    // transform:rotate(360deg);
-    font-size:20px;
-    color: $redLine;
-  }
-  .b-text{
-    display: block;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    // writing-mode: tb-rl;
-    // transform:rotate(360deg);
-    font-size:20px;
-    color: $redLine;
-    // z-index: 2;
-  }
+  transform: translate(-50%, -50%);
+
   iframe {
-    position: relative;
     width: 80vw;
     height: 80vh;
     padding: 44px;
-    // margin: auto;
-    // @media (min-width: 320px) and (max-width: 640px) {
-    //   width: 80vw;
-    //   height: 80vh;
-    // }
+  }
+
+  .fa-times {
+    color: $redLine;
+    font-size: 32px;
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    right: 20px;
+
+    @media (min-width: 320px) and (max-width: 640px) {
+      top: 10px;
+      right: 10px;
+    }
   }
 }
+
 .footer {
   background-color: $footerColor;
 
@@ -410,8 +439,6 @@ body {
       align-items: flex-start;
       padding: 40px;
       color: white;
-
-      &__item {}
 
       &__link {
         color: white;
@@ -481,9 +508,11 @@ body {
       .form {
         padding: 10px;
       }
+
       .contact__item {
         padding: 8px 0;
       }
+
       .form {
         input {
           padding: 10px;

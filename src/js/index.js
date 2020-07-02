@@ -16,10 +16,34 @@ import "../img/telephone.svg"
 import "../img/1.jpg"
 import "../img/2.jpg"
 import "../img/3.jpg"
-// import "../img/arrow.svg"
 
-// import "../img/satara_logo.png"
-// import "../img/laRossa_logo.png"
-// import "../img/pannochka_logo.png"
-// import "../img/nanoestetic_logo.png"
-// import "../img/misfill_logo.png"
+import "../js/app"
+
+const closs = document.querySelector('.map')
+const mapIcon = document.getElementById('mapIcon')
+
+
+mapIcon.addEventListener('click', showMap)
+closs.addEventListener('click', hideMap)
+
+function showModal(element) {
+  element.classList.add('zoomIn')
+  element.style.display = 'block';
+  console.log(element);
+}
+
+function hideModal(element) {
+  element.classList.remove('zoomIn')
+  element.style.display = 'none';
+  console.log(element);
+}
+
+function showMap(e) {
+  e.preventDefault();
+  showModal(closs)
+}
+
+function hideMap(e) {
+  e.preventDefault();
+  hideModal(closs)
+}
