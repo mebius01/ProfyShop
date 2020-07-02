@@ -17,7 +17,6 @@ import "../img/1.jpg"
 import "../img/2.jpg"
 import "../img/3.jpg"
 
-import "../js/app"
 
 const closs = document.querySelector('.map')
 const mapIcon = document.getElementById('mapIcon')
