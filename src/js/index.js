@@ -18,12 +18,18 @@ import "../img/2.jpg"
 import "../img/3.jpg"
 
 
-const closs = document.querySelector('.map')
+const closMap = document.querySelector('.map')
 const mapIcon = document.getElementById('mapIcon')
+
+const closCall = document.querySelector('.call')
+const callIcon = document.getElementById('callIcon')
 
 
 mapIcon.addEventListener('click', showMap)
-closs.addEventListener('click', hideMap)
+closMap.addEventListener('click', hideMap)
+
+callIcon.addEventListener('click', showCall)
+closCall.addEventListener('click', hideCall)
 
 function showModal(element) {
   element.classList.add('zoomIn')
@@ -39,10 +45,20 @@ function hideModal(element) {
 
 function showMap(e) {
   e.preventDefault();
-  showModal(closs)
+  showModal(closMap)
 }
 
 function hideMap(e) {
   e.preventDefault();
-  hideModal(closs)
+  hideModal(closMap)
+}
+
+function showCall(e) {
+  e.preventDefault();
+  showModal(closCall)
+}
+
+function hideCall(e) {
+  e.preventDefault();
+  hideModal(closCall)
 }
