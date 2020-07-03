@@ -1,26 +1,21 @@
 // import 'normalize-scss'
+import "../js/data"
+
 import '../style/index.scss'
 import "../img/favicon.png"
-// import "../img/logo.png"
 import "../img/facebook.svg"
 import "../img/instagram.svg"
 import "../img/google-maps.svg"
 import "../img/telephone.svg"
-// import "../img/open-menu-1.svg"
-// import "../img/open-menu-1.png"
-// import "../img/address.svg"
-// import "../img/productivity.svg"
-// import "../img/mail.svg"
-// import "../img/phone.svg"
-// import "../img/time-and-date.svg"
 import "../img/1.jpg"
 import "../img/2.jpg"
 import "../img/3.jpg"
+import data from "../js/data"
 
 
+// ICON
 const closMap = document.querySelector('.map')
 const mapIcon = document.getElementById('mapIcon')
-
 const closCall = document.querySelector('.call')
 const callIcon = document.getElementById('callIcon')
 
@@ -62,3 +57,6 @@ function hideCall(e) {
   e.preventDefault();
   hideModal(closCall)
 }
+
+// DATA
+console.log(data)
