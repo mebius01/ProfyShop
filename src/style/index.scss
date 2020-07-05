@@ -639,3 +639,14 @@ body {
   }
 
 }
+
+.dark-line {
+  background: $footerColor;
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 20%;
+  z-index: -1;
+
+}
