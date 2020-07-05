@@ -16,7 +16,7 @@ const data = [{
   {
     id: 3,
     title: "Test long Title and Description",
-    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora vero dolores ab tenetur ipsum or sequi eos et possimus ipsa, cum commodi unde quae maiores minima veniam facere obcaecati excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora vero dolores ab tenetur ipsum or sequi eos et possimus ipsa, cum commodi unde quae maiores minima veniam facere obcaecati excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora vero dolores ab tenetur ipsum or sequi eos et possimus ipsa, cum commodi unde quae maiores minima veniam facere obcaecati excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora vero dolores ab tenetur ipsum or sequi eos et possimus ipsa, cum commodi unde quae maiores minima veniam facere obcaecati excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora vero dolores ab tenetur ipsum or sequi eos et possimus ipsa, cum commodi unde quae maiores minima veniam facere obcaecati excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora vero dolores ab tenetur ipsum or sequi eos et possimus ipsa, cum commodi unde quae maiores minima veniam facere obcaecati excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora vero dolores ab tenetur ipsum or sequi eos et possimus ipsa, cum commodi unde quae maiores minima veniam facere obcaecati excepturi. Lorem ipsum dolor",
     img: "../img/3.jpg"
   }
 ]

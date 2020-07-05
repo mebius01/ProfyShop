@@ -1,6 +1,7 @@
 // import 'normalize-scss'
 import "../js/data"
 import '../style/index.scss'
+import '../img/open-menu-1.png'
 import "../img/favicon.png"
 import "../img/facebook.svg"
 import "../img/instagram.svg"
@@ -35,6 +36,8 @@ import {
   showCall,
   hideCall
 } from './click';
+
+
 
 // DATA
 

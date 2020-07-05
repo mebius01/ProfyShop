@@ -8,10 +8,27 @@ $heightHeader: 200px;
 $heightFooterHeader: $heightHeader+$heightFooter;
 $height100: 100vh;
 $redLine: #e74c3c;
-;
 $textColor: #444444;
 $branColor: #530405;
 $footerColor: #373f48;
+
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+  @keyframes slideInLeft {
+
+    0% {
+      transform: translateX(-100%);
+      visibility: visible;
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
 
 .zoomIn {
   animation-name: zoomIn;
@@ -64,6 +81,7 @@ $footerColor: #373f48;
   animation-name: pulse;
   animation-duration: 0.5s;
   animation-fill-mode: both;
+  animation-iteration-count: infinite;
 
 
   @keyframes pulse {
@@ -492,7 +510,7 @@ body {
     display: block;
     text-align: center;
     // background-color: white;
-    padding: 5px;
+    padding: 2px;
 
     &:focus {
       @extend .focus;
@@ -523,7 +541,7 @@ body {
 
 .map {
   display: none;
-  cursor: pointer;
+  // cursor: pointer;
   width: 100%;
   height: 100%;
   margin: auto;
@@ -542,16 +560,18 @@ body {
   }
 
   .fa-times {
+    cursor: pointer;
+    display: block;
     color: $redLine;
     font-size: 32px;
     position: absolute;
-    z-index: 2;
-    top: 20px;
-    right: 20px;
+    padding: 18px;
+    // z-index: 2;
+    top: 0;
+    right: 0;
 
-    @media (min-width: 320px) and (max-width: 640px) {
-      top: 10px;
-      right: 10px;
+    &:hover {
+      @extend .pulse;
     }
   }
 }
@@ -561,7 +581,7 @@ body {
   // background-color: rgba(250, 250, 250, 0.9);
   width: 50%;
   height: auto;
-  display: none;
+  // display: none;
 
   .form {
     padding: 40px;

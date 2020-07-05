@@ -1,7 +1,8 @@
 const closMap = document.querySelector('.map')
 const mapIcon = document.getElementById('mapIcon')
-const closCall = document.querySelector('.call')
+const Call = document.querySelector('.call')
 const callIcon = document.getElementById('callIcon')
+const closCall = document.getElementById('fa-times-call')
 
 
 mapIcon.addEventListener('click', showMap)
@@ -13,13 +14,11 @@ closCall.addEventListener('click', hideCall)
 function showModal(element) {
   element.classList.add('zoomIn')
   element.style.display = 'block';
-  console.log(element);
 }
 
 function hideModal(element) {
   element.classList.remove('zoomIn')
   element.style.display = 'none';
-  console.log(element);
 }
 
 function showMap(e) {
@@ -34,12 +33,12 @@ function hideMap(e) {
 
 function showCall(e) {
   e.preventDefault();
-  showModal(closCall)
+  showModal(Call)
 }
 
 function hideCall(e) {
   e.preventDefault();
-  hideModal(closCall)
+  hideModal(Call)
 }
 
 export {
