@@ -41,9 +41,9 @@ function hideCall(e) {
   hideModal(Call)
 }
 
-export {
-  showMap,
-  hideMap,
-  showCall,
-  hideCall
-}
+// export {
+//   showMap,
+//   hideMap,
+//   showCall,
+//   hideCall
+// }

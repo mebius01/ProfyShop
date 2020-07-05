@@ -620,3 +620,29 @@ body {
     width: 80%;
   }
 }
+
+.menu {
+  @extend .map;
+
+  &__item {
+    margin-top: 60px;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $footerColor;
+    font-size: 26px;
+    padding: 20px;
+
+    &:hover {
+      @extend .pulse;
+    }
+
+    &:focus {
+      @extend .focus;
+    }
+  }
+
+}

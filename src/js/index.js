@@ -30,12 +30,12 @@ const wow = new WOW({
 wow.init();
 
 // ICON
-import {
-  showMap,
-  hideMap,
-  showCall,
-  hideCall
-} from './click';
+// import {
+//   showMap,
+//   hideMap,
+//   showCall,
+//   hideCall
+// } from './click';
 
 
 
@@ -68,5 +68,48 @@ function createArticle(title, description, id) {
     `
   )
 }
-
 getData(data)
+
+const social = document.querySelector('.social')
+social.addEventListener('click', getEventOnIcon)
+
+function getEventOnIcon(event) {
+  const parent = event.target.parentNode;
+  if (parent.getAttribute('id') == "menu") {
+    event.preventDefault()
+    showHideModal('.menu')
+  } else if (parent.getAttribute('id') == "map") {
+    event.preventDefault()
+    showHideModal('.map')
+
+  } else if (parent.getAttribute('id') == "telephone") {
+    event.preventDefault()
+    showHideModal('.call')
+  }
+}
+
+function getMenu(element) {
+  console.log(element);
+}
+
+function showHideModal(cls) {
+  const element = document.querySelector(cls)
+  const clos = element.querySelector('.fa-times')
+
+  function closeWindow() {
+    element.classList.remove('zoomIn')
+    element.style.display = 'none';
+  }
+
+  element.classList.add('zoomIn')
+  element.style.display = 'block'
+  clos.addEventListener('click', function () {
+    closeWindow()
+  })
+
+  document.addEventListener('keydown', function (event) {
+    if (event.code == 'Escape' || event.keyCode == 27) {
+      closeWindow()
+    }
+  });
+}
