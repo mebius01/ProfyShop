@@ -1,4 +1,5 @@
 // import 'normalize-scss'
+// import "@fortawesome/fontawesome-free/js/all"
 import "../js/data"
 import '../style/index.scss'
 import '../img/open-menu-1.png'
@@ -88,10 +89,6 @@ function getEventOnIcon(event) {
   }
 }
 
-function getMenu(element) {
-  console.log(element);
-}
-
 function showHideModal(cls) {
   const element = document.querySelector(cls)
   const clos = element.querySelector('.fa-times')
@@ -112,4 +109,18 @@ function showHideModal(cls) {
       closeWindow()
     }
   });
+}
+
+const formFooter = document.forms.form_footer;
+
+formFooter.addEventListener("submit", getValueOnCall)
+
+function getValueOnCall(e) {
+  e.preventDefault();
+  if (!formFooter[0].value) {
+    formFooter[0].classList.add('shake')
+  } else {
+    console.log(formFooter[0].value);
+    console.log(formFooter[1].value);
+  }
 }

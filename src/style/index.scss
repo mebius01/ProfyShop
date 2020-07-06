@@ -1,4 +1,5 @@
 @import "./reset.css";
+// @import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
 // @import "./animation.css";
 // @import "./media.css";
 @import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Rubik:wght@300;400;500;700;900&display=swap');
@@ -11,6 +12,7 @@ $redLine: #e74c3c;
 $textColor: #444444;
 $branColor: #530405;
 $footerColor: #373f48;
+
 
 .slideInLeft {
   animation-name: slideInLeft;
@@ -119,7 +121,6 @@ $footerColor: #373f48;
     40%,
     60%,
     80% {
-      -webkit-transform: translate3d(10px, 0, 0);
       transform: translate3d(10px, 0, 0);
     }
   }
