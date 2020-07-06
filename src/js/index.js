@@ -71,6 +71,9 @@ function createArticle(title, description, id) {
 }
 getData(data)
 
+
+// CLICK ON SOCIAL
+
 const social = document.querySelector('.social')
 social.addEventListener('click', getEventOnIcon)
 
@@ -111,16 +114,65 @@ function showHideModal(cls) {
   });
 }
 
+// SEND CALL FORM
 const formFooter = document.forms.form_footer;
+const formSicial = document.forms.form_social;
 
+formSicial.addEventListener("submit", getValueOnCall)
 formFooter.addEventListener("submit", getValueOnCall)
 
+function sendCallForm(obj) {
+  const thank = document.querySelector('.thank')
+  thank.textContent = `${obj.name} спасибо за Ваше обращение, мы обязательно с вами свяжемся в течении 10 минут.`
+  thank.style.display = 'block'
+  setTimeout(function () {
+    thank.style.display = 'none'
+  }, 4000);
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify(obj),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+    .then(response => response.json())
+    .then(json => console.log(json))
+}
+
 function getValueOnCall(e) {
+  // console.log(e.target);
   e.preventDefault();
-  if (!formFooter[0].value) {
-    formFooter[0].classList.add('shake')
+  e.stopPropagation()
+  const name = e.target[0].value
+  const telephone = e.target[1].value
+  const comment = e.target[2].value
+
+  function errorInput(field) {
+    field.classList.add('shake')
+    setTimeout(function () {
+      field.classList.remove('shake')
+    }, 1000);
+  }
+
+  if (!name && !telephone) {
+    errorInput(e.target)
+  } else if (!name) {
+    errorInput(e.target[0])
+  } else if (!telephone) {
+    errorInput(e.target[1])
   } else {
-    console.log(formFooter[0].value);
-    console.log(formFooter[1].value);
+
+
+    const obj = {
+      form_name: e.target.getAttribute("name"),
+      name,
+      telephone,
+      comment
+    }
+    sendCallForm(obj)
+    e.target[0].value = ''
+    e.target[1].value = ''
+
+
   }
 }
