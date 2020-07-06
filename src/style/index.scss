@@ -550,7 +550,6 @@ body {
   }
 }
 
-
 .map {
   display: none;
   width: 100%;
@@ -669,13 +668,13 @@ body {
   position: fixed;
   top: 20px;
   right: 10px;
-  background-color: whitesmoke;
-  color: $redLine;
+  background-color: white;
+  color: $footerColor;
   border-radius: 6px;
   padding: 28px;
   width: 244px;
   height: auto;
-  text-align: center;
+  // text-align: center;
   font-size: 18px;
 }
 

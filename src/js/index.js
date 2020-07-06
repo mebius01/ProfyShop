@@ -123,7 +123,8 @@ formFooter.addEventListener("submit", getValueOnCall)
 
 function sendCallForm(obj) {
   const thank = document.querySelector('.thank')
-  thank.textContent = `${obj.name} спасибо за Ваше обращение, мы обязательно с вами свяжемся в течении 10 минут.`
+  thank.innerHTML = `<p style="color: #e74c3c;">${obj.name}</p> <p>спасибо за Ваше обращение, мы обязательно с Вами свяжемся в течении </p>
+  <p style="color: #e74c3c;">10 минут</p>`
   thank.style.display = 'block'
   setTimeout(function () {
     thank.style.display = 'none'
