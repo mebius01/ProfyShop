@@ -10,8 +10,13 @@ import "../img/2.jpg"
 import "../img/3.jpg"
 
 // DATA category
-import {getData, data} from "../js/data"
-getData(data)
+// import {
+//   getData,
+//   data
+// } from "../js/data"
+// getData(data)
+
+import "../js/data"
 
 //  WOW plugin
 import wow from './plugins'
@@ -21,6 +26,7 @@ wow.init();
 import showHideModal from './click'
 const social = document.querySelector('.social')
 social.addEventListener('click', getEventOnIcon)
+
 function getEventOnIcon(event) {
   const parent = event.target.parentNode;
   if (parent.getAttribute('id') == "menu") {
@@ -99,15 +105,3 @@ function getValueOnCall(e) {
     e.target[2].value = ''
   }
 }
-
-
-
-fetch("https://cors-anywhere.herokuapp.com/https://8th-port.xyz/api/v1/articles/?format=json")
-    .then(response => {
-        console.log(response.status);
-        return response.json();
-    })
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => console.error(error))
