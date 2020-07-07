@@ -21,4 +21,31 @@ const data = [{
   }
 ]
 
-export default data;
+const mian = document.querySelector('.main')
+
+function getData(lst) {
+  lst.forEach(element => {
+    createArticle(element.title, element.description, element.id)
+  });
+}
+
+function createArticle(title, description, id) {
+  mian.insertAdjacentHTML("afterbegin",
+    `
+    <article class="article wow scale-in-ver-bottom" data-wow-offset="222">
+    <div class="article__img">
+      <img src="./img/${id}.jpg" alt="" class="img" />
+    </div>
+    <div class="article__content">
+      <a href="" class="article__link">
+        <h2 class="article__title h2">
+          ${title} <i class="fas fa-long-arrow-alt-right"></i>
+        </h2>
+      </a>
+      <p class="article__text">${description}</p>
+    </div>
+    </article>
+    `
+  )
+}
+export {getData, data}
