@@ -60,7 +60,7 @@ function sendCallForm(obj) {
   setTimeout(function () {
     thank.style.display = 'none'
   }, 5000);
-  fetch('https://jsonplaceholder.typicode.com/posts', {
+  fetch('http://127.0.0.1:8000/api/v1/post/', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
@@ -77,7 +77,7 @@ function getValueOnCall(e) {
   e.stopPropagation()
   const name = e.target[0].value
   const telephone = e.target[1].value
-  const comment = e.target[2].value
+  let comment = e.target[2].value
 
   function errorInput(field) {
     field.classList.add('shake')
@@ -93,13 +93,24 @@ function getValueOnCall(e) {
   } else if (!telephone) {
     errorInput(e.target[1])
   } else {
-    const obj = {
-      form_name: e.target.getAttribute("name"),
-      name,
-      telephone,
-      comment
+    if (!comment) {
+      comment = 'Пустой коментарий'
+      const obj = {
+        // form_name: e.target.getAttribute("name"),
+        name,
+        telephone,
+        comment
+      }
+      sendCallForm(obj)
+    } else {
+      const obj = {
+        // form_name: e.target.getAttribute("name"),
+        name,
+        telephone,
+        comment
+      }
+      sendCallForm(obj)
     }
-    sendCallForm(obj)
     e.target[0].value = ''
     e.target[1].value = ''
     e.target[2].value = ''
