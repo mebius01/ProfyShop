@@ -23,7 +23,7 @@
 
 // https://cors-anywhere.herokuapp.com/
 
-fetch("https://profy-rest.herokuapp.com/api/v1/?format=json")
+fetch("https://profy-rest.herokuapp.com/api/v1/")
   .then(response => {
     console.log(response.status);
     return response.json();

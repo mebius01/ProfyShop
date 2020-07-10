@@ -60,7 +60,7 @@ function sendCallForm(obj) {
   setTimeout(function () {
     thank.style.display = 'none'
   }, 5000);
-  fetch('http://127.0.0.1:8000/api/v1/post/', {
+  fetch('https://profy-rest.herokuapp.com/api/v1/post/', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
@@ -71,6 +71,7 @@ function sendCallForm(obj) {
     .then(json => console.log(json))
 }
 
+// /^(\+{0,})(\d{0,})([(]{1}\d{1,3}[)]{0,}){0,}(\s?\d+|\+\d{2,3}\s{1}\d+|\d+){1}[\s|-]?\d+([\s|-]?\d+){1,2}(\s){0,}$/
 function getValueOnCall(e) {
 
   e.preventDefault();
