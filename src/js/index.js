@@ -5,26 +5,28 @@ import "../img/facebook.svg"
 import "../img/instagram.svg"
 import "../img/google-maps.svg"
 import "../img/telephone.svg"
-import "../img/1.jpg"
-import "../img/2.jpg"
-import "../img/3.jpg"
 
-// DATA category
-// import {
-//   getData,
-//   data
-// } from "../js/data"
-// getData(data)
+import wow from './plugins/wow'
+import api from './services/Api'
+import getData from './views/categories'
+import {
+  validationForm,
+  sendCallForm
+} from './views/form'
+import showHideModal from './views/click'
 
-import "../js/data"
+const formFooter = document.forms.form_footer;
+const formSicial = document.forms.form_social;
+const mian = document.querySelector('.main')
+const social = document.querySelector('.social')
 
-//  WOW plugin
-import wow from './plugins'
-wow.init();
+// Render for Categories
+api.getCategories().then((response) => {
+  console.log(response.status);
+  getData(response.data, mian)
+})
 
 // CLICK ON SOCIAL
-import showHideModal from './click'
-const social = document.querySelector('.social')
 social.addEventListener('click', getEventOnIcon)
 
 function getEventOnIcon(event) {
@@ -43,77 +45,20 @@ function getEventOnIcon(event) {
 }
 
 // SEND CALL FORM
-const formFooter = document.forms.form_footer;
-const formSicial = document.forms.form_social;
-
 formSicial.addEventListener("submit", getValueOnCall)
 formFooter.addEventListener("submit", getValueOnCall)
 
-function sendCallForm(obj) {
-  const thank = document.querySelector('.thank')
-  thank.innerHTML = `
-    <p style="color: #e74c3c;">${obj.name}</p>
-    <p>спасибо за Ваше обращение, мы обязательно с Вами свяжемся в течении </p>
-    <p style="color: #e74c3c;">10 минут</p>
-    `
-  thank.style.display = 'block'
-  setTimeout(function () {
-    thank.style.display = 'none'
-  }, 5000);
-  fetch('https://profy-rest.herokuapp.com/api/v1/post/', {
-      method: 'POST',
-      body: JSON.stringify(obj),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8"
-      }
-    })
-    .then(response => response.json())
-    .then(json => console.log(json))
-}
-
-// /^(\+{0,})(\d{0,})([(]{1}\d{1,3}[)]{0,}){0,}(\s?\d+|\+\d{2,3}\s{1}\d+|\d+){1}[\s|-]?\d+([\s|-]?\d+){1,2}(\s){0,}$/
 function getValueOnCall(e) {
-
   e.preventDefault();
-  e.stopPropagation()
-  const name = e.target[0].value
-  const telephone = e.target[1].value
-  let comment = e.target[2].value
-
-  function errorInput(field) {
-    field.classList.add('shake')
-    setTimeout(function () {
-      field.classList.remove('shake')
-    }, 1000);
-  }
-
-  if (!name && !telephone) {
-    errorInput(e.target)
-  } else if (!name) {
-    errorInput(e.target[0])
-  } else if (!telephone) {
-    errorInput(e.target[1])
-  } else {
-    if (!comment) {
-      comment = 'Пустой коментарий'
-      const obj = {
-        // form_name: e.target.getAttribute("name"),
-        name,
-        telephone,
-        comment
-      }
-      sendCallForm(obj)
-    } else {
-      const obj = {
-        // form_name: e.target.getAttribute("name"),
-        name,
-        telephone,
-        comment
-      }
-      sendCallForm(obj)
+  e.stopPropagation();
+  const parent = e.target.parentNode;
+  const objectCall = validationForm(e);
+  if (objectCall) {
+    sendCallForm(objectCall)
+    if (parent.classList.contains('call')) {
+      parent.style.display = 'none'
     }
-    e.target[0].value = ''
-    e.target[1].value = ''
-    e.target[2].value = ''
   }
 }
+
+wow.init();

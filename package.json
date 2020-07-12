@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
+    "axios": "^0.19.2",
     "wow.js": "^1.2.2"
   }
 }

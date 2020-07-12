@@ -1,7 +1,5 @@
 @import "./reset.css";
-// @import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
-// @import "./animation.css";
-// @import "./media.css";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 @import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Rubik:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 $heightFooter: 30px;
@@ -274,6 +272,7 @@ body {
 
 .main {
   width: 80%;
+  // height: calc(100vh - #{$heightFooterHeader}); // ! fix
   margin: 40px auto;
 
   @media (min-width: 320px) and (max-width: 640px) {
@@ -664,7 +663,8 @@ body {
 
 .thank {
   @extend .shadow;
-  display: none;
+  // display: none;
+  visibility: visible;
   position: fixed;
   top: 20px;
   right: 10px;
