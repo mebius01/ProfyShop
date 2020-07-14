@@ -748,7 +748,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst url = 'http://127.0.0.1:8000/api/v1'\n// const url = 'https://profy-rest.herokuapp.com/api/v1'\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (url);\n\n//# sourceURL=webpack:///./src/js/config/config.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n// const url = 'http://127.0.0.1:8000/api/v1'\nconst url = 'https://profy-shop.top/api/v1'\n// const url = 'https://profy-rest.herokuapp.com/api/v1'\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (url);\n\n//# sourceURL=webpack:///./src/js/config/config.js?");
 
 /***/ }),
 
